@@ -3,124 +3,124 @@ import def.js.Array;
 import def.js.Function;
 @jsweet.lang.Interface
 public abstract class UnderscoreStatic extends def.js.Object {
-    native public <T> Underscore<T> apply(def.underscore._.Dictionary<T> value);
-    native public <T> Underscore<T> apply(Array<T> value);
-    native public <T> Underscore<T> apply(T value);
-    native public <T> def.underscore._.List<T> each(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Void> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T> each(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Void> iterator, Object context);
-    native public <T> def.underscore._.List<T> forEach(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Void> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T> forEach(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Void> iterator, Object context);
-    native public <T,TResult> TResult[] map(def.underscore._.List<T> list, Object iterator, Object context);
-    native public <T,TResult> TResult[] map(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,TResult> iterator, Object context);
-    native public <T,TResult> TResult[] collect(def.underscore._.List<T> list, Object iterator, Object context);
-    native public <T,TResult> TResult[] collect(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,TResult> iterator, Object context);
-    native public <T,TResult> TResult reduce(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T,TResult> TResult reduce(def.underscore._.Dictionary<T> list, def.underscore._.MemoObjectIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T,TResult> TResult inject(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T,TResult> TResult foldl(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T,TResult> TResult reduceRight(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T,TResult> TResult foldr(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T> T find(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T find(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T,U extends java.lang.Object> T find(def.underscore._.List<T> object, U iterator);
-    native public <T> T find(def.underscore._.List<T> object, String iterator);
-    native public <T> T detect(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T detect(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T,U extends java.lang.Object> T detect(def.underscore._.List<T> object, U iterator);
-    native public <T> T detect(def.underscore._.List<T> object, String iterator);
-    native public <T> T[] filter(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T[] filter(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> T[] select(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T[] select(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T,U extends java.lang.Object> T[] where(def.underscore._.List<T> list, U properties);
-    native public <T,U extends java.lang.Object> T findWhere(def.underscore._.List<T> list, U properties);
-    native public <T> T[] reject(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T[] reject(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean every(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean every(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean all(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean all(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean some(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean some(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean any(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean any(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean any(def.underscore._.List<T> list, T value);
-    native public <T> Boolean contains(def.underscore._.List<T> list, T value, double fromIndex);
-    native public <T> Boolean contains(def.underscore._.Dictionary<T> object, T value);
-    native public <T> Boolean include(def.underscore._.Collection<T> list, T value, double fromIndex);
-    native public <T> Boolean include(def.underscore._.Dictionary<T> object, T value);
-    native public <T> Boolean includes(def.underscore._.Collection<T> list, T value, double fromIndex);
-    native public <T> Boolean includes(def.underscore._.Dictionary<T> object, T value);
-    native public <T extends java.lang.Object> Object invoke(def.underscore._.List<T> list, String methodName, Object... args);
-    native public <T extends java.lang.Object> Object[] pluck(def.underscore._.List<T> list, String propertyName);
-    native public double max(def.underscore._.List<Double> list);
+    native public <T> Underscore<T> $apply(Dictionary<T> value);
+    native public <T> Underscore<T> $apply(Array<T> value);
+    native public <T> Underscore<T> $apply(T value);
+    native public <T> List<T> each(List<T> list, ListIterator<T,Void> iterator, Object context);
+    native public <T> Dictionary<T> each(Dictionary<T> object, ObjectIterator<T,Void> iterator, Object context);
+    native public <T> List<T> forEach(List<T> list, ListIterator<T,Void> iterator, Object context);
+    native public <T> Dictionary<T> forEach(Dictionary<T> object, ObjectIterator<T,Void> iterator, Object context);
+    native public <T,TResult> TResult[] map(List<T> list, Object iterator, Object context);
+    native public <T,TResult> TResult[] map(Dictionary<T> object, ObjectIterator<T,TResult> iterator, Object context);
+    native public <T,TResult> TResult[] collect(List<T> list, Object iterator, Object context);
+    native public <T,TResult> TResult[] collect(Dictionary<T> object, ObjectIterator<T,TResult> iterator, Object context);
+    native public <T,TResult> TResult reduce(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T,TResult> TResult reduce(Dictionary<T> list, MemoObjectIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T,TResult> TResult inject(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T,TResult> TResult foldl(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T,TResult> TResult reduceRight(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T,TResult> TResult foldr(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T> T find(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T find(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T,U extends java.lang.Object> T find(List<T> object, U iterator);
+    native public <T> T find(List<T> object, String iterator);
+    native public <T> T detect(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T detect(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T,U extends java.lang.Object> T detect(List<T> object, U iterator);
+    native public <T> T detect(List<T> object, String iterator);
+    native public <T> T[] filter(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] filter(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] select(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] select(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T,U extends java.lang.Object> T[] where(List<T> list, U properties);
+    native public <T,U extends java.lang.Object> T findWhere(List<T> list, U properties);
+    native public <T> T[] reject(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] reject(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean every(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean every(Dictionary<T> list, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean all(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean all(Dictionary<T> list, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean some(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean some(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean any(List<T> list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean any(Dictionary<T> object, ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean any(List<T> list, T value);
+    native public <T> Boolean contains(List<T> list, T value, double fromIndex);
+    native public <T> Boolean contains(Dictionary<T> object, T value);
+    native public <T> Boolean include(Collection<T> list, T value, double fromIndex);
+    native public <T> Boolean include(Dictionary<T> object, T value);
+    native public <T> Boolean includes(Collection<T> list, T value, double fromIndex);
+    native public <T> Boolean includes(Dictionary<T> object, T value);
+    native public <T extends java.lang.Object> Object invoke(List<T> list, String methodName, Object... args);
+    native public <T extends java.lang.Object> Object[] pluck(List<T> list, String propertyName);
+    native public double max(List<Double> list);
     /**
         * @see _.max
         */
-    native public double max(def.underscore._.Dictionary<Double> object);
-    native public <T> T max(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public double max(Dictionary<Double> object);
+    native public <T> T max(List<T> list, ListIterator<T,?> iterator, Object context);
     /**
         * @see _.max
         */
-    native public <T> T max(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,?> iterator, Object context);
-    native public double min(def.underscore._.List<Double> list);
+    native public <T> T max(Dictionary<T> list, ObjectIterator<T,?> iterator, Object context);
+    native public double min(List<Double> list);
     /**
          * @see _.min
          */
-    native public double min(def.underscore._.Dictionary<Double> o);
-    native public <T> T min(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public double min(Dictionary<Double> o);
+    native public <T> T min(List<T> list, ListIterator<T,?> iterator, Object context);
     /**
         * @see _.min
         */
-    native public <T> T min(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,?> iterator, Object context);
-    native public <T,TSort> T[] sortBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T> T[] sortBy(def.underscore._.List<T> list, String iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(def.underscore._.List<T> list, String iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T> indexBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T> indexBy(def.underscore._.List<T> list, String iterator, Object context);
-    native public <T> def.underscore._.Dictionary<Double> countBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<Double> countBy(def.underscore._.List<T> list, String iterator, Object context);
-    native public <T> T[] shuffle(def.underscore._.Collection<T> list);
-    native public <T> T[] sample(def.underscore._.Collection<T> list, double n);
-    native public <T> T sample(def.underscore._.Collection<T> list);
-    native public <T> T[] toArray(def.underscore._.Collection<T> list);
-    native public <T> double size(def.underscore._.Collection<T> list);
-    native public <T> T[][] partition(Array<T> array, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T first(def.underscore._.List<T> array);
-    native public <T> T[] first(def.underscore._.List<T> array, double n);
-    native public <T> T head(def.underscore._.List<T> array);
-    native public <T> T[] head(def.underscore._.List<T> array, double n);
-    native public <T> T take(def.underscore._.List<T> array);
-    native public <T> T[] take(def.underscore._.List<T> array, double n);
-    native public <T> T[] initial(def.underscore._.List<T> array, double n);
-    native public <T> T last(def.underscore._.List<T> array);
-    native public <T> T[] last(def.underscore._.List<T> array, double n);
-    native public <T> T[] rest(def.underscore._.List<T> array, double n);
-    native public <T> T[] tail(def.underscore._.List<T> array, double n);
-    native public <T> T[] drop(def.underscore._.List<T> array, double n);
-    native public <T> T[] compact(def.underscore._.List<T> array);
-    native public Object[] flatten(def.underscore._.List<?> array, Boolean shallow);
-    native public <T> T[] without(def.underscore._.List<T> array, @SuppressWarnings("unchecked") T... values);
-    native public <T> T[] union(@SuppressWarnings("unchecked") def.underscore._.List<T>... arrays);
-    native public <T> T[] intersection(@SuppressWarnings("unchecked") def.underscore._.List<T>... arrays);
-    native public <T> T[] difference(def.underscore._.List<T> array, @SuppressWarnings("unchecked") def.underscore._.List<T>... others);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator, Object context);
+    native public <T> T min(Dictionary<T> list, ObjectIterator<T,?> iterator, Object context);
+    native public <T,TSort> T[] sortBy(List<T> list, ListIterator<T,TSort> iterator, Object context);
+    native public <T> T[] sortBy(List<T> list, String iterator, Object context);
+    native public <T> Dictionary<T[]> groupBy(List<T> list, ListIterator<T,?> iterator, Object context);
+    native public <T> Dictionary<T[]> groupBy(List<T> list, String iterator, Object context);
+    native public <T> Dictionary<T> indexBy(List<T> list, ListIterator<T,?> iterator, Object context);
+    native public <T> Dictionary<T> indexBy(List<T> list, String iterator, Object context);
+    native public <T> Dictionary<Double> countBy(List<T> list, ListIterator<T,?> iterator, Object context);
+    native public <T> Dictionary<Double> countBy(List<T> list, String iterator, Object context);
+    native public <T> T[] shuffle(Collection<T> list);
+    native public <T> T[] sample(Collection<T> list, double n);
+    native public <T> T sample(Collection<T> list);
+    native public <T> T[] toArray(Collection<T> list);
+    native public <T> double size(Collection<T> list);
+    native public <T> T[][] partition(Array<T> array, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T first(List<T> array);
+    native public <T> T[] first(List<T> array, double n);
+    native public <T> T head(List<T> array);
+    native public <T> T[] head(List<T> array, double n);
+    native public <T> T take(List<T> array);
+    native public <T> T[] take(List<T> array, double n);
+    native public <T> T[] initial(List<T> array, double n);
+    native public <T> T last(List<T> array);
+    native public <T> T[] last(List<T> array, double n);
+    native public <T> T[] rest(List<T> array, double n);
+    native public <T> T[] tail(List<T> array, double n);
+    native public <T> T[] drop(List<T> array, double n);
+    native public <T> T[] compact(List<T> array);
+    native public Object[] flatten(List<?> array, Boolean shallow);
+    native public <T> T[] without(List<T> array, @SuppressWarnings("unchecked") T... values);
+    native public <T> T[] union(@SuppressWarnings("unchecked") List<T>... arrays);
+    native public <T> T[] intersection(@SuppressWarnings("unchecked") List<T>... arrays);
+    native public <T> T[] difference(List<T> array, @SuppressWarnings("unchecked") List<T>... others);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted, ListIterator<T,TSort> iterator, Object context);
+    native public <T,TSort> T[] uniq(List<T> array, ListIterator<T,TSort> iterator, Object context);
+    native public <T,TSort> T[] unique(List<T> array, ListIterator<T,TSort> iterator, Object context);
+    native public <T,TSort> T[] unique(List<T> array, Boolean isSorted, ListIterator<T,TSort> iterator, Object context);
     native public Object[][] zip(Object[]... arrays);
     native public Object[] zip(Object... arrays);
     native public Object[][] unzip(Object[]... arrays);
-    native public <TResult extends java.lang.Object> TResult object(def.underscore._.List<String> keys, def.underscore._.List<?> values);
+    native public <TResult extends java.lang.Object> TResult object(List<String> keys, List<?> values);
     native public <TResult extends java.lang.Object> TResult object(Object[]... keyValuePairs);
-    native public <TResult extends java.lang.Object> TResult object(def.underscore._.List<?> list, Object values);
-    native public <T> double indexOf(def.underscore._.List<T> array, T value, Boolean isSorted);
-    native public <T> double indexOf(def.underscore._.List<T> array, T value, double startFrom);
-    native public <T> double lastIndexOf(def.underscore._.List<T> array, T value, double from);
-    native public <T> double findIndex(def.underscore._.List<T> array, def.underscore._.ListIterator<T,Boolean> predicate, Object context);
-    native public <T> double findLastIndex(def.underscore._.List<T> array, def.underscore._.ListIterator<T,Boolean> predicate, Object context);
-    native public <T,TSort> double sortedIndex(def.underscore._.List<T> list, T value, java.util.function.Function<T,TSort> iterator, Object context);
+    native public <TResult extends java.lang.Object> TResult object(List<?> list, Object values);
+    native public <T> double indexOf(List<T> array, T value, Boolean isSorted);
+    native public <T> double indexOf(List<T> array, T value, double startFrom);
+    native public <T> double lastIndexOf(List<T> array, T value, double from);
+    native public <T> double findIndex(List<T> array, ListIterator<T,Boolean> predicate, Object context);
+    native public <T> double findLastIndex(List<T> array, ListIterator<T,Boolean> predicate, Object context);
+    native public <T,TSort> double sortedIndex(List<T> list, T value, java.util.function.Function<T,TSort> iterator, Object context);
     native public double[] range(double start, double stop, double step);
     native public double[] range(double stop);
     /**
@@ -382,8 +382,8 @@ public abstract class UnderscoreStatic extends def.js.Object {
     native public Object delay(Function func, double wait, Object... args);
     native public Object delay(Function func, Object... args);
     native public void defer(Function fn, Object... args);
-    native public <T extends Function> jsweet.util.union.Union<T,def.underscore._.Cancelable> throttle(T func, double wait, def.underscore._.ThrottleSettings options);
-    native public <T extends Function> jsweet.util.union.Union<T,def.underscore._.Cancelable> debounce(T fn, double wait, Boolean immediate);
+    native public <T extends Function> jsweet.util.union.Union<T,Cancelable> throttle(T func, double wait, ThrottleSettings options);
+    native public <T extends Function> jsweet.util.union.Union<T,Cancelable> debounce(T fn, double wait, Boolean immediate);
     native public <T extends Function> T once(T fn);
     native public Function restArgs(Function func, double starIndex);
     native public Function after(double count, Function fn);
@@ -392,7 +392,7 @@ public abstract class UnderscoreStatic extends def.js.Object {
     native public java.util.function.Function<Object,Boolean> negate(java.util.function.Function<Object,Boolean> predicate);
     native public Function compose(Function... functions);
     native public String[] allKeys(Object object);
-    native public <T> T[] values(def.underscore._.Dictionary<T> object);
+    native public <T> T[] values(Dictionary<T> object);
     native public Object[] values(Object object);
     /**
          * Like map, but for objects. Transform the value of each property in turn.
@@ -401,21 +401,21 @@ public abstract class UnderscoreStatic extends def.js.Object {
          * @param context The optional context (value of `this`) to bind to
          * @return a new _.Dictionary of property values
          */
-    native public <T,U> def.underscore._.Dictionary<U> mapObject(def.underscore._.Dictionary<T> object, jsweet.util.function.TriFunction<T,String,def.underscore._.Dictionary<T>,U> iteratee, Object context);
+    native public <T,U> Dictionary<U> mapObject(Dictionary<T> object, jsweet.util.function.TriFunction<T,String,Dictionary<T>,U> iteratee, Object context);
     /**
          * Like map, but for objects. Transform the value of each property in turn.
          * @param object The object to transform
          * @param iteratee The function that tranforms property values
          * @param context The optional context (value of `this`) to bind to
          */
-    native public <T> def.underscore._.Dictionary<T> mapObject(Object object, jsweet.util.function.TriFunction<Object,String,Object,T> iteratee, Object context);
+    native public <T> Dictionary<T> mapObject(Object object, jsweet.util.function.TriFunction<Object,String,Object,T> iteratee, Object context);
     /**
          * Like map, but for objects. Retrieves a property from each entry in the object, as if by _.property
          * @param object The object to transform
          * @param iteratee The property name to retrieve
          * @param context The optional context (value of `this`) to bind to
          */
-    native public def.underscore._.Dictionary<?> mapObject(Object object, String iteratee, Object context);
+    native public Dictionary<?> mapObject(Object object, String iteratee, Object context);
     native public Object[][] pairs(Object object);
     native public Object invert(Object object);
     native public String[] functions(Object object);
@@ -435,7 +435,7 @@ public abstract class UnderscoreStatic extends def.js.Object {
         * @param predicate Predicate function.
         * @param context `this` object in `iterator`, optional.
         */
-    native public <T> String findKey(def.underscore._.Dictionary<T> obj, def.underscore._.ObjectIterator<T,Boolean> predicate, Object context);
+    native public <T> String findKey(Dictionary<T> obj, ObjectIterator<T,Boolean> predicate, Object context);
     native public Object pick(Object object, Object... keys);
     native public Object pick(Object object, jsweet.util.function.TriFunction<Object,Object,Object,Object> fn);
     native public Object omit(Object object, String[] keys);
@@ -445,8 +445,8 @@ public abstract class UnderscoreStatic extends def.js.Object {
     native public <T> T clone(T object);
     native public <T> T tap(T object, Function intercepter);
     native public Boolean has(Object object, String key);
-    native public <T,TResult> def.underscore._.ListIterator<T,TResult> matches(T attrs);
-    native public <T,TResult> def.underscore._.ListIterator<T,TResult> matcher(T attrs);
+    native public <T,TResult> ListIterator<T,TResult> matches(T attrs);
+    native public <T,TResult> ListIterator<T,TResult> matcher(T attrs);
     native public java.util.function.Function<Object,Object> property(String key);
     native public java.util.function.Function<String,Object> propertyOf(Object object);
     native public Boolean isEqual(Object object, Object other);
@@ -483,11 +483,11 @@ public abstract class UnderscoreStatic extends def.js.Object {
     native public String escape(String str);
     native public String unescape(String str);
     native public Object result(Object object, String property, Object defaultValue);
-    native public java.util.function.Function<Object,String> template(String templateString, def.underscore._.TemplateSettings settings);
-    public def.underscore._.TemplateSettings templateSettings;
+    native public java.util.function.Function<Object,String> template(String templateString, TemplateSettings settings);
+    public TemplateSettings templateSettings;
     native public double now();
     native public <T> _Chain<T> chain(T[] obj);
-    native public <T> _Chain<T> chain(def.underscore._.Dictionary<T> obj);
+    native public <T> _Chain<T> chain(Dictionary<T> obj);
     native public <T extends java.lang.Object> _Chain<T> chain(T obj);
     /** This is an automatically generated object type (see the source definition). */
     @jsweet.lang.ObjectType
@@ -1159,101 +1159,101 @@ public abstract class UnderscoreStatic extends def.js.Object {
     public static class Partial122<T8,T1,T2,T3,T4,T5,T6> extends def.js.Object {
         native public T8 apply(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6);
     }
-    native public <T> def.underscore._.List<T> each(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Void> iterator);
-    native public <T> def.underscore._.Dictionary<T> each(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Void> iterator);
-    native public <T> def.underscore._.List<T> forEach(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Void> iterator);
-    native public <T> def.underscore._.Dictionary<T> forEach(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Void> iterator);
-    native public <T,TResult> TResult[] map(def.underscore._.List<T> list, Object iterator);
-    native public <T,TResult> TResult[] map(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,TResult> iterator);
-    native public <T,TResult> TResult[] collect(def.underscore._.List<T> list, Object iterator);
-    native public <T,TResult> TResult[] collect(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,TResult> iterator);
-    native public <T,TResult> TResult reduce(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <T,TResult> TResult reduce(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <T,TResult> TResult reduce(def.underscore._.Dictionary<T> list, def.underscore._.MemoObjectIterator<T,TResult> iterator, TResult memo);
-    native public <T,TResult> TResult reduce(def.underscore._.Dictionary<T> list, def.underscore._.MemoObjectIterator<T,TResult> iterator);
-    native public <T,TResult> TResult inject(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <T,TResult> TResult inject(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <T,TResult> TResult foldl(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <T,TResult> TResult foldl(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <T,TResult> TResult reduceRight(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <T,TResult> TResult reduceRight(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <T,TResult> TResult foldr(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <T,TResult> TResult foldr(def.underscore._.Collection<T> list, def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <T> T find(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T find(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> T detect(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T detect(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> T[] filter(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] filter(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> T[] select(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] select(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> T[] reject(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] reject(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> Boolean every(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> Boolean every(def.underscore._.List<T> list);
-    native public <T> Boolean every(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> Boolean every(def.underscore._.Dictionary<T> list);
-    native public <T> Boolean all(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> Boolean all(def.underscore._.List<T> list);
-    native public <T> Boolean all(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> Boolean all(def.underscore._.Dictionary<T> list);
-    native public <T> Boolean some(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> Boolean some(def.underscore._.List<T> list);
-    native public <T> Boolean some(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> Boolean some(def.underscore._.Dictionary<T> object);
-    native public <T> Boolean any(def.underscore._.List<T> list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> Boolean any(def.underscore._.List<T> list);
-    native public <T> Boolean any(def.underscore._.Dictionary<T> object, def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> Boolean any(def.underscore._.Dictionary<T> object);
-    native public <T> Boolean contains(def.underscore._.List<T> list, T value);
-    native public <T> Boolean include(def.underscore._.Collection<T> list, T value);
-    native public <T> Boolean includes(def.underscore._.Collection<T> list, T value);
-    native public <T> T max(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator);
+    native public <T> List<T> each(List<T> list, ListIterator<T,Void> iterator);
+    native public <T> Dictionary<T> each(Dictionary<T> object, ObjectIterator<T,Void> iterator);
+    native public <T> List<T> forEach(List<T> list, ListIterator<T,Void> iterator);
+    native public <T> Dictionary<T> forEach(Dictionary<T> object, ObjectIterator<T,Void> iterator);
+    native public <T,TResult> TResult[] map(List<T> list, Object iterator);
+    native public <T,TResult> TResult[] map(Dictionary<T> object, ObjectIterator<T,TResult> iterator);
+    native public <T,TResult> TResult[] collect(List<T> list, Object iterator);
+    native public <T,TResult> TResult[] collect(Dictionary<T> object, ObjectIterator<T,TResult> iterator);
+    native public <T,TResult> TResult reduce(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo);
+    native public <T,TResult> TResult reduce(Collection<T> list, MemoIterator<T,TResult> iterator);
+    native public <T,TResult> TResult reduce(Dictionary<T> list, MemoObjectIterator<T,TResult> iterator, TResult memo);
+    native public <T,TResult> TResult reduce(Dictionary<T> list, MemoObjectIterator<T,TResult> iterator);
+    native public <T,TResult> TResult inject(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo);
+    native public <T,TResult> TResult inject(Collection<T> list, MemoIterator<T,TResult> iterator);
+    native public <T,TResult> TResult foldl(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo);
+    native public <T,TResult> TResult foldl(Collection<T> list, MemoIterator<T,TResult> iterator);
+    native public <T,TResult> TResult reduceRight(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo);
+    native public <T,TResult> TResult reduceRight(Collection<T> list, MemoIterator<T,TResult> iterator);
+    native public <T,TResult> TResult foldr(Collection<T> list, MemoIterator<T,TResult> iterator, TResult memo);
+    native public <T,TResult> TResult foldr(Collection<T> list, MemoIterator<T,TResult> iterator);
+    native public <T> T find(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> T find(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> T detect(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> T detect(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> T[] filter(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> T[] filter(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> T[] select(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> T[] select(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> T[] reject(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> T[] reject(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> Boolean every(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> Boolean every(List<T> list);
+    native public <T> Boolean every(Dictionary<T> list, ObjectIterator<T,Boolean> iterator);
+    native public <T> Boolean every(Dictionary<T> list);
+    native public <T> Boolean all(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> Boolean all(List<T> list);
+    native public <T> Boolean all(Dictionary<T> list, ObjectIterator<T,Boolean> iterator);
+    native public <T> Boolean all(Dictionary<T> list);
+    native public <T> Boolean some(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> Boolean some(List<T> list);
+    native public <T> Boolean some(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> Boolean some(Dictionary<T> object);
+    native public <T> Boolean any(List<T> list, ListIterator<T,Boolean> iterator);
+    native public <T> Boolean any(List<T> list);
+    native public <T> Boolean any(Dictionary<T> object, ObjectIterator<T,Boolean> iterator);
+    native public <T> Boolean any(Dictionary<T> object);
+    native public <T> Boolean contains(List<T> list, T value);
+    native public <T> Boolean include(Collection<T> list, T value);
+    native public <T> Boolean includes(Collection<T> list, T value);
+    native public <T> T max(List<T> list, ListIterator<T,?> iterator);
     /**
         * @see _.max
         */
-    native public <T> T max(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,?> iterator);
-    native public <T> T min(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator);
+    native public <T> T max(Dictionary<T> list, ObjectIterator<T,?> iterator);
+    native public <T> T min(List<T> list, ListIterator<T,?> iterator);
     /**
         * @see _.min
         */
-    native public <T> T min(def.underscore._.Dictionary<T> list, def.underscore._.ObjectIterator<T,?> iterator);
-    native public <T,TSort> T[] sortBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <T,TSort> T[] sortBy(def.underscore._.List<T> list);
-    native public <T> T[] sortBy(def.underscore._.List<T> list, String iterator);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(def.underscore._.List<T> list);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(def.underscore._.List<T> list, String iterator);
-    native public <T> def.underscore._.Dictionary<T> indexBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> def.underscore._.Dictionary<T> indexBy(def.underscore._.List<T> list, String iterator);
-    native public <T> def.underscore._.Dictionary<Double> countBy(def.underscore._.List<T> list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> def.underscore._.Dictionary<Double> countBy(def.underscore._.List<T> list);
-    native public <T> def.underscore._.Dictionary<Double> countBy(def.underscore._.List<T> list, String iterator);
-    native public <T> T[][] partition(Array<T> array, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] initial(def.underscore._.List<T> array);
-    native public <T> T[] rest(def.underscore._.List<T> array);
-    native public <T> T[] tail(def.underscore._.List<T> array);
-    native public <T> T[] drop(def.underscore._.List<T> array);
-    native public Object[] flatten(def.underscore._.List<?> array);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, Boolean isSorted);
-    native public <TResult extends java.lang.Object> TResult object(def.underscore._.List<?> list);
-    native public <T> double indexOf(def.underscore._.List<T> array, T value);
-    native public <T> double lastIndexOf(def.underscore._.List<T> array, T value);
-    native public <T> double findIndex(def.underscore._.List<T> array, def.underscore._.ListIterator<T,Boolean> predicate);
-    native public <T> double findLastIndex(def.underscore._.List<T> array, def.underscore._.ListIterator<T,Boolean> predicate);
-    native public <T,TSort> double sortedIndex(def.underscore._.List<T> list, T value, java.util.function.Function<T,TSort> iterator);
-    native public <T,TSort> double sortedIndex(def.underscore._.List<T> list, T value);
+    native public <T> T min(Dictionary<T> list, ObjectIterator<T,?> iterator);
+    native public <T,TSort> T[] sortBy(List<T> list, ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] sortBy(List<T> list);
+    native public <T> T[] sortBy(List<T> list, String iterator);
+    native public <T> Dictionary<T[]> groupBy(List<T> list, ListIterator<T,?> iterator);
+    native public <T> Dictionary<T[]> groupBy(List<T> list);
+    native public <T> Dictionary<T[]> groupBy(List<T> list, String iterator);
+    native public <T> Dictionary<T> indexBy(List<T> list, ListIterator<T,?> iterator);
+    native public <T> Dictionary<T> indexBy(List<T> list, String iterator);
+    native public <T> Dictionary<Double> countBy(List<T> list, ListIterator<T,?> iterator);
+    native public <T> Dictionary<Double> countBy(List<T> list);
+    native public <T> Dictionary<Double> countBy(List<T> list, String iterator);
+    native public <T> T[][] partition(Array<T> array, ListIterator<T,Boolean> iterator);
+    native public <T> T[] initial(List<T> array);
+    native public <T> T[] rest(List<T> array);
+    native public <T> T[] tail(List<T> array);
+    native public <T> T[] drop(List<T> array);
+    native public Object[] flatten(List<?> array);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted, ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted);
+    native public <T,TSort> T[] uniq(List<T> array);
+    native public <T,TSort> T[] uniq(List<T> array, ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] unique(List<T> array, ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] unique(List<T> array);
+    native public <T,TSort> T[] unique(List<T> array, Boolean isSorted, ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] unique(List<T> array, Boolean isSorted);
+    native public <TResult extends java.lang.Object> TResult object(List<?> list);
+    native public <T> double indexOf(List<T> array, T value);
+    native public <T> double lastIndexOf(List<T> array, T value);
+    native public <T> double findIndex(List<T> array, ListIterator<T,Boolean> predicate);
+    native public <T> double findLastIndex(List<T> array, ListIterator<T,Boolean> predicate);
+    native public <T,TSort> double sortedIndex(List<T> list, T value, java.util.function.Function<T,TSort> iterator);
+    native public <T,TSort> double sortedIndex(List<T> list, T value);
     native public double[] range(double start, double stop);
     native public Function memoize(Function fn);
-    native public <T extends Function> jsweet.util.union.Union<T,def.underscore._.Cancelable> throttle(T func, double wait);
-    native public <T extends Function> jsweet.util.union.Union<T,def.underscore._.Cancelable> debounce(T fn, double wait);
+    native public <T extends Function> jsweet.util.union.Union<T,Cancelable> throttle(T func, double wait);
+    native public <T extends Function> jsweet.util.union.Union<T,Cancelable> debounce(T fn, double wait);
     native public Function restArgs(Function func);
     /**
          * Like map, but for objects. Transform the value of each property in turn.
@@ -1262,86 +1262,86 @@ public abstract class UnderscoreStatic extends def.js.Object {
          * @param context The optional context (value of `this`) to bind to
          * @return a new _.Dictionary of property values
          */
-    native public <T,U> def.underscore._.Dictionary<U> mapObject(def.underscore._.Dictionary<T> object, jsweet.util.function.TriFunction<T,String,def.underscore._.Dictionary<T>,U> iteratee);
+    native public <T,U> Dictionary<U> mapObject(Dictionary<T> object, jsweet.util.function.TriFunction<T,String,Dictionary<T>,U> iteratee);
     /**
          * Like map, but for objects. Transform the value of each property in turn.
          * @param object The object to transform
          * @param iteratee The function that tranforms property values
          * @param context The optional context (value of `this`) to bind to
          */
-    native public <T> def.underscore._.Dictionary<T> mapObject(Object object, jsweet.util.function.TriFunction<Object,String,Object,T> iteratee);
+    native public <T> Dictionary<T> mapObject(Object object, jsweet.util.function.TriFunction<Object,String,Object,T> iteratee);
     /**
          * Like map, but for objects. Retrieves a property from each entry in the object, as if by _.property
          * @param object The object to transform
          * @param iteratee The property name to retrieve
          * @param context The optional context (value of `this`) to bind to
          */
-    native public def.underscore._.Dictionary<?> mapObject(Object object, String iteratee);
+    native public Dictionary<?> mapObject(Object object, String iteratee);
     /**
         * Returns the first key on an object that passes a predicate test.
         * @param obj the object to search in
         * @param predicate Predicate function.
         * @param context `this` object in `iterator`, optional.
         */
-    native public <T> String findKey(def.underscore._.Dictionary<T> obj, def.underscore._.ObjectIterator<T,Boolean> predicate);
+    native public <T> String findKey(Dictionary<T> obj, ObjectIterator<T,Boolean> predicate);
     native public <TResult> TResult[] times(double n, java.util.function.Function<Double,TResult> iterator);
     native public Function iteratee(Function value);
     native public String uniqueId();
     native public Object result(Object object, String property);
     native public java.util.function.Function<Object,String> template(String templateString);
-    native public <T,U extends java.lang.Object> T find(def.underscore._.Dictionary<T> object, U iterator);
-    native public <T> T find(def.underscore._.Dictionary<T> object, String iterator);
-    native public <T,U extends java.lang.Object> T detect(def.underscore._.Dictionary<T> object, U iterator);
-    native public <T> T detect(def.underscore._.Dictionary<T> object, String iterator);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted, java.lang.String iterator, Object context);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted, double iterator, Object context);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, double iterator, Object context);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, java.lang.String iterator, Object context);
-    native public <T> double findIndex(def.underscore._.List<T> array, java.lang.Object predicate, Object context);
-    native public <T> double findLastIndex(def.underscore._.List<T> array, java.lang.Object predicate, Object context);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted, double iterator);
-    native public <T,TSort> T[] uniq(def.underscore._.List<T> array, Boolean isSorted, java.lang.String iterator);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, java.lang.String iterator);
-    native public <T,TSort> T[] unique(def.underscore._.List<T> array, double iterator);
-    native public <T> double findIndex(def.underscore._.List<T> array, java.lang.Object predicate);
-    native public <T> double findLastIndex(def.underscore._.List<T> array, java.lang.Object predicate);
+    native public <T,U extends java.lang.Object> T find(Dictionary<T> object, U iterator);
+    native public <T> T find(Dictionary<T> object, String iterator);
+    native public <T,U extends java.lang.Object> T detect(Dictionary<T> object, U iterator);
+    native public <T> T detect(Dictionary<T> object, String iterator);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted, java.lang.String iterator, Object context);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted, double iterator, Object context);
+    native public <T,TSort> T[] unique(List<T> array, double iterator, Object context);
+    native public <T,TSort> T[] unique(List<T> array, java.lang.String iterator, Object context);
+    native public <T> double findIndex(List<T> array, java.lang.Object predicate, Object context);
+    native public <T> double findLastIndex(List<T> array, java.lang.Object predicate, Object context);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted, double iterator);
+    native public <T,TSort> T[] uniq(List<T> array, Boolean isSorted, java.lang.String iterator);
+    native public <T,TSort> T[] unique(List<T> array, java.lang.String iterator);
+    native public <T,TSort> T[] unique(List<T> array, double iterator);
+    native public <T> double findIndex(List<T> array, java.lang.Object predicate);
+    native public <T> double findLastIndex(List<T> array, java.lang.Object predicate);
     native public <T> Underscore<T> apply(T[] value);
-    native public <T> def.underscore._.List<T> each(T[] list, def.underscore._.ListIterator<T,Void> iterator, Object context);
-    native public <T> def.underscore._.List<T> forEach(T[] list, def.underscore._.ListIterator<T,Void> iterator, Object context);
+    native public <T> List<T> each(T[] list, ListIterator<T,Void> iterator, Object context);
+    native public <T> List<T> forEach(T[] list, ListIterator<T,Void> iterator, Object context);
     native public <T,TResult> TResult[] map(T[] list, Object iterator, Object context);
     native public <T,TResult> TResult[] collect(T[] list, Object iterator, Object context);
-    native public <T> T find(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T find(T[] list, ListIterator<T,Boolean> iterator, Object context);
     native public <T,U extends java.lang.Object> T find(T[] object, U iterator);
     native public <T> T find(T[] object, String iterator);
-    native public <T> T detect(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T detect(T[] list, ListIterator<T,Boolean> iterator, Object context);
     native public <T,U extends java.lang.Object> T detect(T[] object, U iterator);
     native public <T> T detect(T[] object, String iterator);
-    native public <T> T[] filter(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> T[] select(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] filter(T[] list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] select(T[] list, ListIterator<T,Boolean> iterator, Object context);
     native public <T,U extends java.lang.Object> T[] where(T[] list, U properties);
     native public <T,U extends java.lang.Object> T findWhere(T[] list, U properties);
-    native public <T> T[] reject(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean every(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean all(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean some(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public <T> Boolean any(T[] list, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <T> T[] reject(T[] list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean every(T[] list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean all(T[] list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean some(T[] list, ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Boolean any(T[] list, ListIterator<T,Boolean> iterator, Object context);
     native public <T> Boolean any(T[] list, T value);
     native public <T> Boolean contains(T[] list, T value, double fromIndex);
     native public <T extends java.lang.Object> Object invoke(T[] list, String methodName, Object... args);
     native public <T extends java.lang.Object> Object[] pluck(T[] list, String propertyName);
     native public double max(Double[] list);
-    native public <T> T max(T[] list, def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public <T> T max(T[] list, ListIterator<T,?> iterator, Object context);
     native public double min(Double[] list);
-    native public <T> T min(T[] list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T,TSort> T[] sortBy(T[] list, def.underscore._.ListIterator<T,TSort> iterator, Object context);
+    native public <T> T min(T[] list, ListIterator<T,?> iterator, Object context);
+    native public <T,TSort> T[] sortBy(T[] list, ListIterator<T,TSort> iterator, Object context);
     native public <T> T[] sortBy(T[] list, String iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(T[] list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(T[] list, String iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T> indexBy(T[] list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<T> indexBy(T[] list, String iterator, Object context);
-    native public <T> def.underscore._.Dictionary<Double> countBy(T[] list, def.underscore._.ListIterator<T,?> iterator, Object context);
-    native public <T> def.underscore._.Dictionary<Double> countBy(T[] list, String iterator, Object context);
-    native public <T> T[][] partition(T[] array, def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <T> Dictionary<T[]> groupBy(T[] list, ListIterator<T,?> iterator, Object context);
+    native public <T> Dictionary<T[]> groupBy(T[] list, String iterator, Object context);
+    native public <T> Dictionary<T> indexBy(T[] list, ListIterator<T,?> iterator, Object context);
+    native public <T> Dictionary<T> indexBy(T[] list, String iterator, Object context);
+    native public <T> Dictionary<Double> countBy(T[] list, ListIterator<T,?> iterator, Object context);
+    native public <T> Dictionary<Double> countBy(T[] list, String iterator, Object context);
+    native public <T> T[][] partition(T[] array, ListIterator<T,Boolean> iterator, Object context);
     native public <T> T first(T[] array);
     native public <T> T[] first(T[] array, double n);
     native public <T> T head(T[] array);
@@ -1357,70 +1357,70 @@ public abstract class UnderscoreStatic extends def.js.Object {
     native public <T> T[] compact(T[] array);
     native public Object[] flatten(Object[] array, Boolean shallow);
     native public <T> T[] without(T[] array, @SuppressWarnings("unchecked") T... values);
-    native public <T> T[] difference(T[] array, @SuppressWarnings("unchecked") def.underscore._.List<T>... others);
-    native public <T,TSort> T[] uniq(T[] array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T,TSort> T[] uniq(T[] array, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T,TSort> T[] unique(T[] array, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <T,TSort> T[] unique(T[] array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <TResult extends java.lang.Object> TResult object(def.underscore._.List<String> keys, Object[] values);
-    native public <TResult extends java.lang.Object> TResult object(String[] keys, def.underscore._.List<?> values);
+    native public <T> T[] difference(T[] array, @SuppressWarnings("unchecked") List<T>... others);
+    native public <T,TSort> T[] uniq(T[] array, Boolean isSorted, ListIterator<T,TSort> iterator, Object context);
+    native public <T,TSort> T[] uniq(T[] array, ListIterator<T,TSort> iterator, Object context);
+    native public <T,TSort> T[] unique(T[] array, ListIterator<T,TSort> iterator, Object context);
+    native public <T,TSort> T[] unique(T[] array, Boolean isSorted, ListIterator<T,TSort> iterator, Object context);
+    native public <TResult extends java.lang.Object> TResult object(List<String> keys, Object[] values);
+    native public <TResult extends java.lang.Object> TResult object(String[] keys, List<?> values);
     native public <TResult extends java.lang.Object> TResult object(Object[] list, Object values);
     native public <T> double indexOf(T[] array, T value, Boolean isSorted);
     native public <T> double indexOf(T[] array, T value, double startFrom);
     native public <T> double lastIndexOf(T[] array, T value, double from);
-    native public <T> double findIndex(T[] array, def.underscore._.ListIterator<T,Boolean> predicate, Object context);
-    native public <T> double findLastIndex(T[] array, def.underscore._.ListIterator<T,Boolean> predicate, Object context);
+    native public <T> double findIndex(T[] array, ListIterator<T,Boolean> predicate, Object context);
+    native public <T> double findLastIndex(T[] array, ListIterator<T,Boolean> predicate, Object context);
     native public <T,TSort> double sortedIndex(T[] list, T value, java.util.function.Function<T,TSort> iterator, Object context);
-    native public <T> def.underscore._.List<T> each(T[] list, def.underscore._.ListIterator<T,Void> iterator);
-    native public <T> def.underscore._.List<T> forEach(T[] list, def.underscore._.ListIterator<T,Void> iterator);
+    native public <T> List<T> each(T[] list, ListIterator<T,Void> iterator);
+    native public <T> List<T> forEach(T[] list, ListIterator<T,Void> iterator);
     native public <T,TResult> TResult[] map(T[] list, Object iterator);
     native public <T,TResult> TResult[] collect(T[] list, Object iterator);
-    native public <T> T find(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T detect(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] filter(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] select(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> T[] reject(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> Boolean every(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
+    native public <T> T find(T[] list, ListIterator<T,Boolean> iterator);
+    native public <T> T detect(T[] list, ListIterator<T,Boolean> iterator);
+    native public <T> T[] filter(T[] list, ListIterator<T,Boolean> iterator);
+    native public <T> T[] select(T[] list, ListIterator<T,Boolean> iterator);
+    native public <T> T[] reject(T[] list, ListIterator<T,Boolean> iterator);
+    native public <T> Boolean every(T[] list, ListIterator<T,Boolean> iterator);
     native public <T> Boolean every(T[] list);
-    native public <T> Boolean all(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
+    native public <T> Boolean all(T[] list, ListIterator<T,Boolean> iterator);
     native public <T> Boolean all(T[] list);
-    native public <T> Boolean some(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
+    native public <T> Boolean some(T[] list, ListIterator<T,Boolean> iterator);
     native public <T> Boolean some(T[] list);
-    native public <T> Boolean any(T[] list, def.underscore._.ListIterator<T,Boolean> iterator);
+    native public <T> Boolean any(T[] list, ListIterator<T,Boolean> iterator);
     native public <T> Boolean any(T[] list);
     native public <T> Boolean contains(T[] list, T value);
-    native public <T> T max(T[] list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> T min(T[] list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T,TSort> T[] sortBy(T[] list, def.underscore._.ListIterator<T,TSort> iterator);
+    native public <T> T max(T[] list, ListIterator<T,?> iterator);
+    native public <T> T min(T[] list, ListIterator<T,?> iterator);
+    native public <T,TSort> T[] sortBy(T[] list, ListIterator<T,TSort> iterator);
     native public <T,TSort> T[] sortBy(T[] list);
     native public <T> T[] sortBy(T[] list, String iterator);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(T[] list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(T[] list);
-    native public <T> def.underscore._.Dictionary<T[]> groupBy(T[] list, String iterator);
-    native public <T> def.underscore._.Dictionary<T> indexBy(T[] list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> def.underscore._.Dictionary<T> indexBy(T[] list, String iterator);
-    native public <T> def.underscore._.Dictionary<Double> countBy(T[] list, def.underscore._.ListIterator<T,?> iterator);
-    native public <T> def.underscore._.Dictionary<Double> countBy(T[] list);
-    native public <T> def.underscore._.Dictionary<Double> countBy(T[] list, String iterator);
-    native public <T> T[][] partition(T[] array, def.underscore._.ListIterator<T,Boolean> iterator);
+    native public <T> Dictionary<T[]> groupBy(T[] list, ListIterator<T,?> iterator);
+    native public <T> Dictionary<T[]> groupBy(T[] list);
+    native public <T> Dictionary<T[]> groupBy(T[] list, String iterator);
+    native public <T> Dictionary<T> indexBy(T[] list, ListIterator<T,?> iterator);
+    native public <T> Dictionary<T> indexBy(T[] list, String iterator);
+    native public <T> Dictionary<Double> countBy(T[] list, ListIterator<T,?> iterator);
+    native public <T> Dictionary<Double> countBy(T[] list);
+    native public <T> Dictionary<Double> countBy(T[] list, String iterator);
+    native public <T> T[][] partition(T[] array, ListIterator<T,Boolean> iterator);
     native public <T> T[] initial(T[] array);
     native public <T> T[] rest(T[] array);
     native public <T> T[] tail(T[] array);
     native public <T> T[] drop(T[] array);
     native public Object[] flatten(Object[] array);
-    native public <T,TSort> T[] uniq(T[] array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] uniq(T[] array, Boolean isSorted, ListIterator<T,TSort> iterator);
     native public <T,TSort> T[] uniq(T[] array, Boolean isSorted);
     native public <T,TSort> T[] uniq(T[] array);
-    native public <T,TSort> T[] uniq(T[] array, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <T,TSort> T[] unique(T[] array, def.underscore._.ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] uniq(T[] array, ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] unique(T[] array, ListIterator<T,TSort> iterator);
     native public <T,TSort> T[] unique(T[] array);
-    native public <T,TSort> T[] unique(T[] array, Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator);
+    native public <T,TSort> T[] unique(T[] array, Boolean isSorted, ListIterator<T,TSort> iterator);
     native public <T,TSort> T[] unique(T[] array, Boolean isSorted);
     native public <TResult extends java.lang.Object> TResult object(Object[] list);
     native public <T> double indexOf(T[] array, T value);
     native public <T> double lastIndexOf(T[] array, T value);
-    native public <T> double findIndex(T[] array, def.underscore._.ListIterator<T,Boolean> predicate);
-    native public <T> double findLastIndex(T[] array, def.underscore._.ListIterator<T,Boolean> predicate);
+    native public <T> double findIndex(T[] array, ListIterator<T,Boolean> predicate);
+    native public <T> double findLastIndex(T[] array, ListIterator<T,Boolean> predicate);
     native public <T,TSort> double sortedIndex(T[] list, T value, java.util.function.Function<T,TSort> iterator);
     native public <T,TSort> double sortedIndex(T[] list, T value);
     native public <T,TSort> T[] uniq(T[] array, Boolean isSorted, java.lang.String iterator, Object context);

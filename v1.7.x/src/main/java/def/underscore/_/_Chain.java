@@ -4,36 +4,36 @@ import def.js.Function;
 import jsweet.lang.Name;
 @jsweet.lang.Interface
 public abstract class _Chain<T> extends def.js.Object {
-    native public _Chain<T> each(def.underscore._.ListIterator<T,Void> iterator, Object context);
-    native public _Chain<T> each(def.underscore._.ObjectIterator<T,Void> iterator, Object context);
-    native public _Chain<T> forEach(def.underscore._.ListIterator<T,Void> iterator, Object context);
-    native public _Chain<T> forEach(def.underscore._.ObjectIterator<T,Void> iterator, Object context);
+    native public _Chain<T> each(ListIterator<T,Void> iterator, Object context);
+    native public _Chain<T> each(ObjectIterator<T,Void> iterator, Object context);
+    native public _Chain<T> forEach(ListIterator<T,Void> iterator, Object context);
+    native public _Chain<T> forEach(ObjectIterator<T,Void> iterator, Object context);
     native public <TArray> _ChainOfArrays<TArray> map(ListIteratorTTArrays<T,TArray> iterator, Object context);
     native public <TResult> _Chain<TResult> map(ListIteratorTTResult<T,TResult> iterator, Object context);
     native public <TArray> _ChainOfArrays<TArray> map(ObjectIteratorTTArrays<T,TArray> iterator, Object context);
     native public <TResult> _Chain<TResult> map(ObjectIteratorTTResult<T,TResult> iterator, Object context);
-    native public <TResult> _Chain<TResult> collect(def.underscore._.ListIterator<T,TResult> iterator, Object context);
-    native public <TResult> _Chain<TResult> collect(def.underscore._.ObjectIterator<T,TResult> iterator, Object context);
-    native public <TResult> _ChainSingle<TResult> reduce(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <TResult> _ChainSingle<TResult> inject(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <TResult> _ChainSingle<TResult> foldl(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <TResult> _ChainSingle<TResult> reduceRight(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <TResult> _ChainSingle<TResult> foldr(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo, Object context);
-    native public <T> _ChainSingle<T> find(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <TResult> _Chain<TResult> collect(ListIterator<T,TResult> iterator, Object context);
+    native public <TResult> _Chain<TResult> collect(ObjectIterator<T,TResult> iterator, Object context);
+    native public <TResult> _ChainSingle<TResult> reduce(MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <TResult> _ChainSingle<TResult> inject(MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <TResult> _ChainSingle<TResult> foldl(MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <TResult> _ChainSingle<TResult> reduceRight(MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <TResult> _ChainSingle<TResult> foldr(MemoIterator<T,TResult> iterator, TResult memo, Object context);
+    native public <T> _ChainSingle<T> find(ListIterator<T,Boolean> iterator, Object context);
     native public <T,U extends java.lang.Object> _ChainSingle<T> find(U interator);
     native public <T> _ChainSingle<T> find(String interator);
-    native public <T> _ChainSingle<T> detect(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public <T> _ChainSingle<T> detect(ListIterator<T,Boolean> iterator, Object context);
     native public <T,U extends java.lang.Object> _ChainSingle<T> detect(U interator);
     native public <T> _ChainSingle<T> detect(String interator);
-    native public _Chain<T> filter(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public _Chain<T> select(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public _Chain<T> filter(ListIterator<T,Boolean> iterator, Object context);
+    native public _Chain<T> select(ListIterator<T,Boolean> iterator, Object context);
     native public <U extends java.lang.Object> _Chain<T> where(U properties);
     native public <U extends java.lang.Object> _ChainSingle<T> findWhere(U properties);
-    native public _Chain<T> reject(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public _ChainSingle<Boolean> all(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public _ChainSingle<Boolean> every(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public _ChainSingle<Boolean> any(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public _ChainSingle<Boolean> some(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
+    native public _Chain<T> reject(ListIterator<T,Boolean> iterator, Object context);
+    native public _ChainSingle<Boolean> all(ListIterator<T,Boolean> iterator, Object context);
+    native public _ChainSingle<Boolean> every(ListIterator<T,Boolean> iterator, Object context);
+    native public _ChainSingle<Boolean> any(ListIterator<T,Boolean> iterator, Object context);
+    native public _ChainSingle<Boolean> some(ListIterator<T,Boolean> iterator, Object context);
     native public _ChainSingle<Boolean> contains(T value, double fromIndex);
     native public _ChainSingle<Boolean> include(T value, double fromIndex);
     native public _ChainSingle<Boolean> includes(T value, double fromIndex);
@@ -45,13 +45,13 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _ChainSingle<T> min();
     native public _ChainSingle<T> min(ListIteratorTDouble<T> iterator, Object context);
     native public _ChainSingle<T> min(ListIteratorTAny<T> iterator, Object context);
-    native public _Chain<T> sortBy(def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public _Chain<T> sortBy(ListIterator<T,?> iterator, Object context);
     native public _Chain<T> sortBy(String iterator, Object context);
-    native public _ChainOfArrays<T> groupBy(def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public _ChainOfArrays<T> groupBy(ListIterator<T,?> iterator, Object context);
     native public _ChainOfArrays<T> groupBy(String iterator, Object context);
-    native public _Chain<T> indexBy(def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public _Chain<T> indexBy(ListIterator<T,?> iterator, Object context);
     native public _Chain<T> indexBy(String iterator, Object context);
-    native public _Chain<T> countBy(def.underscore._.ListIterator<T,?> iterator, Object context);
+    native public _Chain<T> countBy(ListIterator<T,?> iterator, Object context);
     native public _Chain<T> countBy(String iterator, Object context);
     native public _Chain<T> shuffle();
     native public <T> _Chain<T> sample(double n);
@@ -73,14 +73,14 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> compact();
     native public _Chain<?> flatten(Boolean shallow);
     native public _Chain<T> without(@SuppressWarnings("unchecked") T... values);
-    native public _Chain<T[]> partition(def.underscore._.ListIterator<T,Boolean> iterator, Object context);
-    native public _Chain<T> union(@SuppressWarnings("unchecked") def.underscore._.List<T>... arrays);
-    native public _Chain<T> intersection(@SuppressWarnings("unchecked") def.underscore._.List<T>... arrays);
-    native public _Chain<T> difference(@SuppressWarnings("unchecked") def.underscore._.List<T>... others);
-    native public _Chain<T> uniq(Boolean isSorted, def.underscore._.ListIterator<T,?> iterator);
-    native public <TSort> _Chain<T> uniq(def.underscore._.ListIterator<T,TSort> iterator, Object context);
-    native public <TSort> _Chain<T> unique(Boolean isSorted, def.underscore._.ListIterator<T,TSort> iterator);
-    native public <TSort> _Chain<T> unique(def.underscore._.ListIterator<T,TSort> iterator, Object context);
+    native public _Chain<T[]> partition(ListIterator<T,Boolean> iterator, Object context);
+    native public _Chain<T> union(@SuppressWarnings("unchecked") List<T>... arrays);
+    native public _Chain<T> intersection(@SuppressWarnings("unchecked") List<T>... arrays);
+    native public _Chain<T> difference(@SuppressWarnings("unchecked") List<T>... others);
+    native public _Chain<T> uniq(Boolean isSorted, ListIterator<T,?> iterator);
+    native public <TSort> _Chain<T> uniq(ListIterator<T,TSort> iterator, Object context);
+    native public <TSort> _Chain<T> unique(Boolean isSorted, ListIterator<T,TSort> iterator);
+    native public <TSort> _Chain<T> unique(ListIterator<T,TSort> iterator, Object context);
     native public _Chain<T> zip(Object[]... arrays);
     native public _Chain<T> unzip(Object[]... arrays);
     native public _Chain<T> object(Object[]... keyValuePairs);
@@ -88,8 +88,8 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _ChainSingle<Double> indexOf(T value, Boolean isSorted);
     native public _ChainSingle<Double> indexOf(T value, double startFrom);
     native public _ChainSingle<Double> lastIndexOf(T value, double from);
-    native public <T> _ChainSingle<Double> findIndex(def.underscore._.ListIterator<T,Boolean> predicate, Object context);
-    native public <T> _ChainSingle<Double> findLastIndex(def.underscore._.ListIterator<T,Boolean> predicate, Object context);
+    native public <T> _ChainSingle<Double> findIndex(ListIterator<T,Boolean> predicate, Object context);
+    native public <T> _ChainSingle<Double> findLastIndex(ListIterator<T,Boolean> predicate, Object context);
     native public _ChainSingle<Double> sortedIndex(T value, java.util.function.Function<T,Object> iterator, Object context);
     native public _Chain<T> range(double stop, double step);
     native public _Chain<T> range();
@@ -101,7 +101,7 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> defer(Object... args);
     native public _Chain<T> delay(double wait, Object... args);
     native public _Chain<T> delay(Object... args);
-    native public _Chain<T> throttle(double wait, def.underscore._.ThrottleSettings options);
+    native public _Chain<T> throttle(double wait, ThrottleSettings options);
     native public _Chain<T> debounce(double wait, Boolean immediate);
     native public _Chain<T> once();
     native public _Chain<T> restArgs(double startIndex);
@@ -118,7 +118,7 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> functions();
     native public _Chain<T> methods();
     native public _Chain<T> extend(Object... sources);
-    native public _Chain<T> findKey(def.underscore._.ObjectIterator<?,Boolean> predicate, Object context);
+    native public _Chain<T> findKey(ObjectIterator<?,Boolean> predicate, Object context);
     native public _Chain<T> pick(Object[] keys);
     native public _Chain<T> pick(jsweet.util.function.TriFunction<Object,Object,Object,Object> fn);
     native public _Chain<T> omit(String[] keys);
@@ -163,7 +163,7 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> escape();
     native public _Chain<T> unescape();
     native public _Chain<T> result(String property, Object defaultValue);
-    native public java.util.function.Function<Object,_Chain<T>> template(def.underscore._.TemplateSettings settings);
+    native public java.util.function.Function<Object,_Chain<T>> template(TemplateSettings settings);
     native public _Chain<T> concat(@SuppressWarnings("unchecked") Array<T[]>... arr);
     native public _ChainSingle<T> join(Object separator);
     native public _ChainSingle<T> pop();
@@ -178,51 +178,51 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> unshift(@SuppressWarnings("unchecked") Array<T>... items);
     native public _Chain<T> chain();
     native public <TResult> T[] value();
-    native public _Chain<T> each(def.underscore._.ListIterator<T,Void> iterator);
-    native public _Chain<T> each(def.underscore._.ObjectIterator<T,Void> iterator);
-    native public _Chain<T> forEach(def.underscore._.ListIterator<T,Void> iterator);
-    native public _Chain<T> forEach(def.underscore._.ObjectIterator<T,Void> iterator);
-    native public <TArray> _ChainOfArrays<TArray> map(def.underscore._.ListIterator<T,TArray[]> iterator);
-    native public <TArray> _ChainOfArrays<TArray> map(def.underscore._.ObjectIterator<T,TArray[]> iterator);
-    native public <TResult> _Chain<TResult> collect(def.underscore._.ListIterator<T,TResult> iterator);
-    native public <TResult> _Chain<TResult> collect(def.underscore._.ObjectIterator<T,TResult> iterator);
-    native public <TResult> _ChainSingle<TResult> reduce(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <TResult> _ChainSingle<TResult> reduce(def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <TResult> _ChainSingle<TResult> inject(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <TResult> _ChainSingle<TResult> inject(def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <TResult> _ChainSingle<TResult> foldl(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <TResult> _ChainSingle<TResult> foldl(def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <TResult> _ChainSingle<TResult> reduceRight(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <TResult> _ChainSingle<TResult> reduceRight(def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <TResult> _ChainSingle<TResult> foldr(def.underscore._.MemoIterator<T,TResult> iterator, TResult memo);
-    native public <TResult> _ChainSingle<TResult> foldr(def.underscore._.MemoIterator<T,TResult> iterator);
-    native public <T> _ChainSingle<T> find(def.underscore._.ListIterator<T,Boolean> iterator);
-    native public <T> _ChainSingle<T> detect(def.underscore._.ListIterator<T,Boolean> iterator);
-    native public _Chain<T> filter(def.underscore._.ListIterator<T,Boolean> iterator);
-    native public _Chain<T> select(def.underscore._.ListIterator<T,Boolean> iterator);
-    native public _Chain<T> reject(def.underscore._.ListIterator<T,Boolean> iterator);
-    native public _ChainSingle<Boolean> all(def.underscore._.ListIterator<T,Boolean> iterator);
+    native public _Chain<T> each(ListIterator<T,Void> iterator);
+    native public _Chain<T> each(ObjectIterator<T,Void> iterator);
+    native public _Chain<T> forEach(ListIterator<T,Void> iterator);
+    native public _Chain<T> forEach(ObjectIterator<T,Void> iterator);
+    native public <TArray> _ChainOfArrays<TArray> map(ListIterator<T,TArray[]> iterator);
+    native public <TArray> _ChainOfArrays<TArray> map(ObjectIterator<T,TArray[]> iterator);
+    native public <TResult> _Chain<TResult> collect(ListIterator<T,TResult> iterator);
+    native public <TResult> _Chain<TResult> collect(ObjectIterator<T,TResult> iterator);
+    native public <TResult> _ChainSingle<TResult> reduce(MemoIterator<T,TResult> iterator, TResult memo);
+    native public <TResult> _ChainSingle<TResult> reduce(MemoIterator<T,TResult> iterator);
+    native public <TResult> _ChainSingle<TResult> inject(MemoIterator<T,TResult> iterator, TResult memo);
+    native public <TResult> _ChainSingle<TResult> inject(MemoIterator<T,TResult> iterator);
+    native public <TResult> _ChainSingle<TResult> foldl(MemoIterator<T,TResult> iterator, TResult memo);
+    native public <TResult> _ChainSingle<TResult> foldl(MemoIterator<T,TResult> iterator);
+    native public <TResult> _ChainSingle<TResult> reduceRight(MemoIterator<T,TResult> iterator, TResult memo);
+    native public <TResult> _ChainSingle<TResult> reduceRight(MemoIterator<T,TResult> iterator);
+    native public <TResult> _ChainSingle<TResult> foldr(MemoIterator<T,TResult> iterator, TResult memo);
+    native public <TResult> _ChainSingle<TResult> foldr(MemoIterator<T,TResult> iterator);
+    native public <T> _ChainSingle<T> find(ListIterator<T,Boolean> iterator);
+    native public <T> _ChainSingle<T> detect(ListIterator<T,Boolean> iterator);
+    native public _Chain<T> filter(ListIterator<T,Boolean> iterator);
+    native public _Chain<T> select(ListIterator<T,Boolean> iterator);
+    native public _Chain<T> reject(ListIterator<T,Boolean> iterator);
+    native public _ChainSingle<Boolean> all(ListIterator<T,Boolean> iterator);
     native public _ChainSingle<Boolean> all();
-    native public _ChainSingle<Boolean> every(def.underscore._.ListIterator<T,Boolean> iterator);
+    native public _ChainSingle<Boolean> every(ListIterator<T,Boolean> iterator);
     native public _ChainSingle<Boolean> every();
-    native public _ChainSingle<Boolean> any(def.underscore._.ListIterator<T,Boolean> iterator);
+    native public _ChainSingle<Boolean> any(ListIterator<T,Boolean> iterator);
     native public _ChainSingle<Boolean> any();
-    native public _ChainSingle<Boolean> some(def.underscore._.ListIterator<T,Boolean> iterator);
+    native public _ChainSingle<Boolean> some(ListIterator<T,Boolean> iterator);
     native public _ChainSingle<Boolean> some();
     native public _ChainSingle<Boolean> contains(T value);
     native public _ChainSingle<Boolean> include(T value);
     native public _ChainSingle<Boolean> includes(T value);
-    native public _ChainSingle<T> max(def.underscore._.ListIterator<T,Double> iterator);
-    native public _ChainSingle<T> min(def.underscore._.ListIterator<T,Double> iterator);
-    native public _Chain<T> sortBy(def.underscore._.ListIterator<T,?> iterator);
+    native public _ChainSingle<T> max(ListIterator<T,Double> iterator);
+    native public _ChainSingle<T> min(ListIterator<T,Double> iterator);
+    native public _Chain<T> sortBy(ListIterator<T,?> iterator);
     native public _Chain<T> sortBy();
     native public _Chain<T> sortBy(String iterator);
-    native public _ChainOfArrays<T> groupBy(def.underscore._.ListIterator<T,?> iterator);
+    native public _ChainOfArrays<T> groupBy(ListIterator<T,?> iterator);
     native public _ChainOfArrays<T> groupBy();
     native public _ChainOfArrays<T> groupBy(String iterator);
-    native public _Chain<T> indexBy(def.underscore._.ListIterator<T,?> iterator);
+    native public _Chain<T> indexBy(ListIterator<T,?> iterator);
     native public _Chain<T> indexBy(String iterator);
-    native public _Chain<T> countBy(def.underscore._.ListIterator<T,?> iterator);
+    native public _Chain<T> countBy(ListIterator<T,?> iterator);
     native public _Chain<T> countBy();
     native public _Chain<T> countBy(String iterator);
     native public _Chain<T> initial();
@@ -230,18 +230,18 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> tail();
     native public _Chain<T> drop();
     native public _Chain<?> flatten();
-    native public _Chain<T[]> partition(def.underscore._.ListIterator<T,Boolean> iterator);
+    native public _Chain<T[]> partition(ListIterator<T,Boolean> iterator);
     native public _Chain<T> uniq(Boolean isSorted);
     native public _Chain<T> uniq();
-    native public <TSort> _Chain<T> uniq(def.underscore._.ListIterator<T,TSort> iterator);
+    native public <TSort> _Chain<T> uniq(ListIterator<T,TSort> iterator);
     native public <TSort> _Chain<T> unique(Boolean isSorted);
     native public <TSort> _Chain<T> unique();
-    native public <TSort> _Chain<T> unique(def.underscore._.ListIterator<T,TSort> iterator);
+    native public <TSort> _Chain<T> unique(ListIterator<T,TSort> iterator);
     native public _Chain<T> object();
     native public _ChainSingle<Double> indexOf(T value);
     native public _ChainSingle<Double> lastIndexOf(T value);
-    native public <T> _ChainSingle<Double> findIndex(def.underscore._.ListIterator<T,Boolean> predicate);
-    native public <T> _ChainSingle<Double> findLastIndex(def.underscore._.ListIterator<T,Boolean> predicate);
+    native public <T> _ChainSingle<Double> findIndex(ListIterator<T,Boolean> predicate);
+    native public <T> _ChainSingle<Double> findLastIndex(ListIterator<T,Boolean> predicate);
     native public _ChainSingle<Double> sortedIndex(T value, java.util.function.Function<T,Object> iterator);
     native public _ChainSingle<Double> sortedIndex(T value);
     native public _Chain<T> range(double stop);
@@ -249,7 +249,7 @@ public abstract class _Chain<T> extends def.js.Object {
     native public _Chain<T> throttle(double wait);
     native public _Chain<T> debounce(double wait);
     native public _Chain<T> restArgs();
-    native public _Chain<T> findKey(def.underscore._.ObjectIterator<?,Boolean> predicate);
+    native public _Chain<T> findKey(ObjectIterator<?,Boolean> predicate);
     native public _Chain<T> create();
     native public <TResult> _Chain<T> times(java.util.function.Function<Double,TResult> iterator);
     native public _Chain<T> iteratee();
@@ -257,12 +257,12 @@ public abstract class _Chain<T> extends def.js.Object {
     native public java.util.function.Function<Object,_Chain<T>> template();
     native public _ChainSingle<T> join();
     native public _Chain<T> slice(double start);
-    native public <T> _ChainSingle<T> find(def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
-    native public <T> _ChainSingle<T> detect(def.underscore._.ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> _ChainSingle<T> find(ObjectIterator<T,Boolean> iterator, Object context);
+    native public <T> _ChainSingle<T> detect(ObjectIterator<T,Boolean> iterator, Object context);
     native public <T> _ChainSingle<Double> findIndex(java.lang.Object predicate, Object context);
     native public <T> _ChainSingle<Double> findLastIndex(java.lang.Object predicate, Object context);
-    native public <T> _ChainSingle<T> find(def.underscore._.ObjectIterator<T,Boolean> iterator);
-    native public <T> _ChainSingle<T> detect(def.underscore._.ObjectIterator<T,Boolean> iterator);
+    native public <T> _ChainSingle<T> find(ObjectIterator<T,Boolean> iterator);
+    native public <T> _ChainSingle<T> detect(ObjectIterator<T,Boolean> iterator);
     native public <T> _ChainSingle<Double> findIndex(java.lang.Object predicate);
     native public <T> _ChainSingle<Double> findLastIndex(java.lang.Object predicate);
     native public _Chain<T> concat(@SuppressWarnings("unchecked") T[]... arr);
@@ -272,32 +272,32 @@ public abstract class _Chain<T> extends def.js.Object {
     /** This class was automatically generated for disambiguating erased method signatures. */
     @jsweet.lang.Erased
     public static class ListIteratorTTArrays<T,TArray> extends def.js.Object {
-        public ListIteratorTTArrays(def.underscore._.ListIterator<T,TArray[]> iterator){}
+        public ListIteratorTTArrays(ListIterator<T,TArray[]> iterator){}
     }
     /** This class was automatically generated for disambiguating erased method signatures. */
     @jsweet.lang.Erased
     public static class ListIteratorTTResult<T,TResult> extends def.js.Object {
-        public ListIteratorTTResult(def.underscore._.ListIterator<T,TResult> iterator){}
+        public ListIteratorTTResult(ListIterator<T,TResult> iterator){}
     }
     /** This class was automatically generated for disambiguating erased method signatures. */
     @jsweet.lang.Erased
     public static class ObjectIteratorTTArrays<T,TArray> extends def.js.Object {
-        public ObjectIteratorTTArrays(def.underscore._.ObjectIterator<T,TArray[]> iterator){}
+        public ObjectIteratorTTArrays(ObjectIterator<T,TArray[]> iterator){}
     }
     /** This class was automatically generated for disambiguating erased method signatures. */
     @jsweet.lang.Erased
     public static class ObjectIteratorTTResult<T,TResult> extends def.js.Object {
-        public ObjectIteratorTTResult(def.underscore._.ObjectIterator<T,TResult> iterator){}
+        public ObjectIteratorTTResult(ObjectIterator<T,TResult> iterator){}
     }
     /** This class was automatically generated for disambiguating erased method signatures. */
     @jsweet.lang.Erased
     public static class ListIteratorTAny<T> extends def.js.Object {
-        public ListIteratorTAny(def.underscore._.ListIterator<T,?> iterator){}
+        public ListIteratorTAny(ListIterator<T,?> iterator){}
     }
     /** This class was automatically generated for disambiguating erased method signatures. */
     @jsweet.lang.Erased
     public static class ListIteratorTDouble<T> extends def.js.Object {
-        public ListIteratorTDouble(def.underscore._.ListIterator<T,Double> iterator){}
+        public ListIteratorTDouble(ListIterator<T,Double> iterator){}
     }
 }
 
