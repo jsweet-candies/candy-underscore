@@ -1,4 +1,4 @@
-package def.underscore._;
+package def.underscore.__;
 import def.js.RegExp;
 @jsweet.lang.Interface
 public abstract class TemplateSettings extends def.js.Object {

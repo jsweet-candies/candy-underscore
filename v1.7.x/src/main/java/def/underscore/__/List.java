@@ -1,4 +1,4 @@
-package def.underscore._;
+package def.underscore.__;
 @jsweet.lang.Interface
 @jsweet.lang.SyntacticIterable
 public abstract class List<T> extends Collection<T> implements Iterable<T> {

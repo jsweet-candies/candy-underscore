@@ -1,4 +1,4 @@
-package def.underscore._;
+package def.underscore.__;
 @jsweet.lang.Interface
 public abstract class _ChainOfArrays<T> extends _Chain<T[]> {
     native public _Chain<T> flatten(Boolean shallow);

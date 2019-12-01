@@ -1,4 +1,4 @@
-package def.underscore._;
+package def.underscore.__;
 import def.js.Array;
 import def.js.Function;
 @jsweet.lang.Interface
