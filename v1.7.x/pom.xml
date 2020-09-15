@@ -2,14 +2,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jsweet.candies</groupId>
+	<groupId>org.jsweet.v3.candies</groupId>
 	<artifactId>underscore</artifactId>
-	<version>1.7.0-20191201-1</version>
+	<version>1.7.0-20200915</version>
 	<properties>
 		<jsweet.transpiler.version>3.0.0-SNAPSHOT</jsweet.transpiler.version>
+		<jsweet.core.version>6.0.0</jsweet.core.version>
+
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version.release>11</java.version.release>
 		<java.version>1.${java.version.release}</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
 		<repository>
@@ -39,9 +43,9 @@
 	</pluginRepositories>
 	<dependencies>
 		<dependency>
-			<groupId>org.jsweet</groupId>
+			<groupId>org.jsweet.v3</groupId>
 			<artifactId>jsweet-core</artifactId>
-			<version>5-20170726</version>
+			<version>${jsweet.core.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -63,6 +67,9 @@
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
+					<compilerArgs>
+
+					</compilerArgs>
 				</configuration>
 			</plugin>
 
@@ -74,7 +81,7 @@
 					<verbose>true</verbose>
 					<bundle>true</bundle>
 					<tsOut>src/main/resources/META-INF/resources/typings/${project.artifactId}/${project.version}</tsOut>
-					<targetVersion>ES5</targetVersion>
+					<targetVersion>ES6</targetVersion>
 					<excludes>
 						<exclude>**jsweet/util/function/**</exclude>
 					</excludes>
@@ -85,6 +92,13 @@
 						<phase>generate-sources</phase>
 						<goals>
 							<goal>jsweet</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -118,6 +132,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -137,12 +152,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10.3</version>
+				<version>3.1.1</version>
 				<configuration>
 					<javadocVersion>1.8</javadocVersion>
 					<sourcepath>src/main/java</sourcepath>
 					<skip>${skipJavadoc}</skip>
-					<encoding>UTF-8</encoding>
+					<encoding>${project.build.sourceEncoding}</encoding>
 					<fixTags>all</fixTags>
 					<failOnError>false</failOnError>
 					<!-- leave these options unchanged to place the Javadoc at the right 
@@ -162,6 +177,28 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>src/main/resources/META-INF/resources/webjars</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<fileset>
+							<directory>src/main/resources/META-INF/resources/typings</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
 			</plugin>
 
 			<plugin>
