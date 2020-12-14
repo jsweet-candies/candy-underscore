@@ -4,10 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jsweet.candies</groupId>
 	<artifactId>underscore</artifactId>
-	<version>1.7.0-20191201-1</version>
+	<version>1.7.0-20201211</version>
 	<properties>
-		<jsweet.transpiler.version>3.0.0-SNAPSHOT</jsweet.transpiler.version>
-		<java.version.release>11</java.version.release>
+		<jsweet.transpiler.version>3.0.0</jsweet.transpiler.version>
+		<!-- always generate 1.8 classes to preserve backward compatibility of candies -->
+		<java.version.release>8</java.version.release>
 		<java.version>1.${java.version.release}</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -61,7 +62,8 @@
 					<release>${java.version.release}</release>
 					<compilerVersion>${java.version}</compilerVersion>
 					<source>${java.version}</source>
-					<target>${java.version}</target>
+					<!-- always generate Java APIs for Java 8 to preservce backward compatibility --> 
+					<target>1.8</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
@@ -115,7 +117,7 @@
 				</executions>
 			</plugin>
 
-			<plugin>
+<!--			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
 				<executions>
@@ -145,11 +147,8 @@
 					<encoding>UTF-8</encoding>
 					<fixTags>all</fixTags>
 					<failOnError>false</failOnError>
-					<!-- leave these options unchanged to place the Javadoc at the right 
-						place for jsweet.org -->
 					<reportOutputDirectory>/var/www/apidocs/releases/org/jsweet/candies</reportOutputDirectory>
 					<destDir>${project.artifactId}/${project.version}</destDir>
-					<!-- end of jsweet.org configuration -->
 					<header><![CDATA[<a href="http://www.jsweet.org" target="_blank" style="text-transform: lowercase">http://www.jsweet.org<a>]]></header>
 					<bottom><![CDATA[<center>Copyright 2015, <a href="http://www.cincheo.org" target="_blank">Cinch??o SAS<a> - Web site: <a href="http://www.jsweet.org" target="_blank">http://www.jsweet.org<a><center>]]></bottom>
 					<stylesheetfile>/var/www/apidocs/stylesheet.css</stylesheetfile>
@@ -162,7 +161,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
